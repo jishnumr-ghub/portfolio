@@ -1,11 +1,135 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jishnu's Portfolio</title>
-  <script src="yourfile.js"></script>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Custom JavaScript -->
+  <script src="script.js"></script>
+  <style>
+    /* Additional custom styles */
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    .section-heading {
+      @apply text-3xl font-bold mb-6 text-gray-800;
+    }
+    .card {
+      @apply bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow;
+    }
+  </style>
 </head>
-<body>
-  <h1>Hello, I’m Jishnu 👋</h1>
-  <p>Welcome to my portfolio website.</p>
+<body class="bg-gray-100">
+  <!-- Navigation -->
+  <nav class="bg-white shadow-md sticky top-0 z-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+      <div class="flex justify-between items-center">
+        <h1 class="text-2xl font-bold text-gray-800">Jishnu's Portfolio</h1>
+        <div class="space-x-4">
+          <a href="#about" class="text-gray-600 hover:text-blue-600">About</a>
+          <a href="#projects" class="text-gray-600 hover:text-blue-600">Projects</a>
+          <a href="#experience" class="text-gray-600 hover:text-blue-600">Experience</a>
+          <a href="#contact" class="text-gray-600 hover:text-blue-600">Contact</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="about" class="py-16 bg-blue-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <img src="https://via.placeholder.com/150" alt="Jishnu's Photo" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover">
+      <h1 class="text-4xl font-bold text-gray-800">Hello, I’m Jishnu 👋</h1>
+      <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
+        Welcome to my portfolio website. I'm a passionate [Your Profession, e.g., Web Developer] with expertise in creating innovative solutions and delivering high-quality projects.
+      </p>
+      <a href="https://www.linkedin.com/in/your-linkedin-profile" target="_blank" class="mt-6 inline-block bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700">
+        Connect on LinkedIn
+      </a>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="section-heading">Projects</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Project 1 -->
+        <div class="card">
+          <img src="https://via.placeholder.com/300x200" alt="Project 1" class="w-full h-48 object-cover rounded-t-lg">
+          <h3 class="text-xl font-semibold mt-4">Project One</h3>
+          <p class="text-gray-600 mt-2">A web application built with [Tech Stack, e.g., React and Node.js] to solve [specific problem].</p>
+          <a href="#" class="text-blue-600 hover:underline mt-4 inline-block">View Project</a>
+        </div>
+        <!-- Project 2 -->
+        <div class="card">
+          <img src="https://via.placeholder.com/300x200" alt="Project 2" class="w-full h-48 object-cover rounded-t-lg">
+          <h3 class="text-xl font-semibold mt-4">Project Two</h3>
+          <p class="text-gray-600 mt-2">A mobile-friendly app developed using [Tech Stack, e.g., Flutter] for [purpose].</p>
+          <a href="#" class="text-blue-600 hover:underline mt-4 inline-block">View Project</a>
+        </div>
+        <!-- Project 3 -->
+        <div class="card">
+          <img src="https://via.placeholder.com/300x200" alt="Project 3" class="w-full h-48 object-cover rounded-t-lg">
+          <h3 class="text-xl font-semibold mt-4">Project Three</h3>
+          <p class="text-gray-600 mt-2">An innovative solution using [Tech Stack, e.g., Python and Django] to address [problem].</p>
+          <a href="#" class="text-blue-600 hover:underline mt-4 inline-block">View Project</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Work Experience Section -->
+  <section id="experience" class="py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="section-heading">Work Experience</h2>
+      <div class="space-y-6">
+        <!-- Experience 1 -->
+        <div class="card">
+          <h3 class="text-xl font-semibold">[Job Title, e.g., Software Engineer]</h3>
+          <p class="text-gray-600">[Company Name] | [Start Date] - [End Date or Present]</p>
+          <ul class="list-disc pl-5 mt-2 text-gray-600">
+            <li>Developed and maintained [specific project or responsibility].</li>
+            <li>Collaborated with cross-functional teams to deliver [specific outcome].</li>
+            <li>Implemented [specific technology or tool] to improve [specific metric].</li>
+          </ul>
+        </div>
+        <!-- Experience 2 -->
+        <div class="card">
+          <h3 class="text-xl font-semibold">[Job Title, e.g., Junior Developer]</h3>
+          <p class="text-gray-600">[Company Name] | [Start Date] - [End Date]</p>
+          <ul class="list-disc pl-5 mt-2 text-gray-600">
+            <li>Contributed to [specific project or task].</li>
+            <li>Optimized [specific process or feature] for better performance.</li>
+            <li>Supported [specific team or initiative] to achieve [goal].</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="section-heading">Get in Touch</h2>
+      <p class="text-gray-600 max-w-2xl mx-auto mb-6">
+        I'm always open to new opportunities and collaborations. Feel free to reach out!
+      </p>
+      <div class="space-y-4">
+        <p>Email: <a href="mailto:your.email@example.com" class="text-blue-600 hover:underline">your.email@example.com</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/your-linkedin-profile" target="_blank" class="text-blue-600 hover:underline">linkedin.com/in/your-linkedin-profile</a></p>
+        <p>GitHub: <a href="https://github.com/your-github-profile" target="_blank" class="text-blue-600 hover:underline">github.com/your-github-profile</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-6">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <p>&copy; 2025 Jishnu. All rights reserved.</p>
+    </div>
+  </footer>
 </body>
 </html>
