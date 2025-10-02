@@ -26,32 +26,6 @@
             top: 0;
             z-index: 1000;
         }
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        nav h1 {
-            font-size: 1.5rem;
-        }
-        nav ul {
-            list-style: none;
-            display: flex;
-        }
-        nav ul li {
-            margin-left: 2rem;
-        }
-        nav ul li a {
-            color: #fff;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-        nav ul li a:hover {
-            color: #ccc;
-        }
         .hero {
             background: linear-gradient(to right, #667eea 0%, #764ba2 100%);
             color: #fff;
@@ -118,11 +92,11 @@
             .hero h2 {
                 font-size: 2rem;
             }
-            nav ul {
+            .nav-menu {
                 flex-direction: column;
                 gap: 1rem;
             }
-            nav ul li {
+            .nav-menu li {
                 margin-left: 0;
             }
         }
@@ -130,15 +104,28 @@
 </head>
 <body>
     <header>
-        <nav>
-            <h1>Jishnu</h1>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#contact">Contact</a></li>
+        <nav class="flex justify-between items-center max-w-7xl mx-auto px-4 py-4">
+            <div class="flex items-center space-x-4">
+                <img src="img/PI.jpg" alt="Jishnu M R" class="w-12 h-12 rounded-full object-cover ring-2 ring-white/20">
+                <div>
+                    <h1 class="text-xl font-bold text-white">Jishnu M R</h1>
+                    <p class="text-sm text-gray-300">AI Researcher</p>
+                </div>
+            </div>
+            <div class="hidden md:flex items-center space-x-2 text-sm text-gray-300">
+                <a href="mailto:jishnumr02@gmail.com" class="hover:text-white transition-colors">jishnumr02@gmail.com</a>
+                <span>|</span>
+                <a href="tel:+919061140730" class="hover:text-white transition-colors">+91 9061140730</a>
+                <span>|</span>
+                Idukki, Kerala
+            </div>
+            <ul class="nav-menu flex space-x-8">
+                <li><a href="#home" class="text-white hover:text-blue-300 transition-colors">Home</a></li>
+                <li><a href="#about" class="text-white hover:text-blue-300 transition-colors">About</a></li>
+                <li><a href="#education" class="text-white hover:text-blue-300 transition-colors">Education</a></li>
+                <li><a href="#projects" class="text-white hover:text-blue-300 transition-colors">Projects</a></li>
+                <li><a href="#skills" class="text-white hover:text-blue-300 transition-colors">Skills</a></li>
+                <li><a href="#contact" class="text-white hover:text-blue-300 transition-colors">Contact</a></li>
             </ul>
         </nav>
     </header>
