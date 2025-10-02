@@ -1,135 +1,302 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jishnu's Portfolio</title>
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Custom JavaScript -->
-  <script src="script.js"></script>
-  <style>
-    /* Additional custom styles */
-    body {
-      font-family: 'Inter', sans-serif;
-    }
-    .section-heading {
-      @apply text-3xl font-bold mb-6 text-gray-800;
-    }
-    .card {
-      @apply bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jishnu - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        nav h1 {
+            font-size: 1.5rem;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+        nav ul li {
+            margin-left: 2rem;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        nav ul li a:hover {
+            color: #ccc;
+        }
+        .hero {
+            background: linear-gradient(to right, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            text-align: center;
+            padding: 150px 20px 100px;
+            margin-top: 80px;
+        }
+        .hero h2 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+        .btn {
+            display: inline-block;
+            background: #fff;
+            color: #333;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .btn:hover {
+            background: #eee;
+        }
+        .contact {
+            background: #333;
+            color: #fff;
+            text-align: center;
+        }
+        .contact form {
+            max-width: 600px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        .contact input, .contact textarea {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+        .contact button {
+            background: #667eea;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .contact button:hover {
+            background: #5a67d8;
+        }
+        footer {
+            background: #222;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+        }
+        @media (max-width: 768px) {
+            .hero h2 {
+                font-size: 2rem;
+            }
+            nav ul {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            nav ul li {
+                margin-left: 0;
+            }
+        }
+    </style>
 </head>
-<body class="bg-gray-100">
-  <!-- Navigation -->
-  <nav class="bg-white shadow-md sticky top-0 z-10">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-      <div class="flex justify-between items-center">
-        <h1 class="text-2xl font-bold text-gray-800">Jishnu's Portfolio</h1>
-        <div class="space-x-4">
-          <a href="#about" class="text-gray-600 hover:text-blue-600">About</a>
-          <a href="#projects" class="text-gray-600 hover:text-blue-600">Projects</a>
-          <a href="#experience" class="text-gray-600 hover:text-blue-600">Experience</a>
-          <a href="#contact" class="text-gray-600 hover:text-blue-600">Contact</a>
-        </div>
-      </div>
-    </div>
-  </nav>
+<body>
+    <header>
+        <nav>
+            <h1>Jishnu</h1>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <!-- Hero Section -->
-  <section id="about" class="py-16 bg-blue-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <img src="img/PI.jpg" alt="Jishnu's Photo" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover">
-      <h1 class="text-4xl font-bold text-gray-800">Hello, I’m Jishnu 👋</h1>
-      <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
-        Welcome to my portfolio! I’m Jishnu, an AI researcher with a background in Physics and a Master’s in Artificial Intelligence. My work focuses on deep learning, gesture recognition, and medical AI, where I design innovative models and solutions for real-world impact. Explore my projects to see how I bridge research and technology to solve complex challenges.
-      </p>
-      <a href="https://www.linkedin.com/in/jishnumr" target="_blank" class="mt-6 inline-block bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700">
-        Connect on LinkedIn
-      </a>
-    </div>
-  </section>
+    <section id="home" class="hero">
+        <h2>Welcome to My Portfolio</h2>
+        <p>I'm a passionate AI researcher creating innovative solutions in deep learning and medical AI.</p>
+        <a href="#projects" class="btn">View My Work</a>
+    </section>
 
-  <!-- Projects Section -->
-  <section id="projects" class="py-16">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="section-heading">Projects</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <!-- Project 1 -->
-        <div class="card">
-          <img src="https://via.placeholder.com/300x200" alt="Project 1" class="w-full h-48 object-cover rounded-t-lg">
-          <h3 class="text-xl font-semibold mt-4">Project One</h3>
-          <p class="text-gray-600 mt-2">A web application built with [Tech Stack, e.g., React and Node.js] to solve [specific problem].</p>
-          <a href="#" class="text-blue-600 hover:underline mt-4 inline-block">View Project</a>
+    <section id="about" class="py-16 bg-blue-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <img src="img/PI.jpg" alt="Jishnu's Photo" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover">
+          <h1 class="text-4xl font-bold text-gray-800">Hello, I’m Jishnu 👋</h1>
+          <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
+            Welcome to my portfolio! I’m Jishnu, an AI researcher with a background in Physics and a Master’s in Artificial Intelligence. My work focuses on deep learning, gesture recognition, and medical AI, where I design innovative models and solutions for real-world impact. Explore my projects to see how I bridge research and technology to solve complex challenges.
+          </p>
+          <a href="https://www.linkedin.com/in/jishnumr" target="_blank" class="mt-6 inline-block bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700">
+            Connect on LinkedIn
+          </a>
+          
+          <a href="https://github.com/jishnumr-ghub" target="_blank" class="mt-6 inline-block bg-gray-800 text-white px-6 py-2 rounded-lg hover:bg-gray-900 ml-4">
+            View on GitHub
+          </a>
         </div>
-        <!-- Project 2 -->
-        <div class="card">
-          <img src="https://via.placeholder.com/300x200" alt="Project 2" class="w-full h-48 object-cover rounded-t-lg">
-          <h3 class="text-xl font-semibold mt-4">Project Two</h3>
-          <p class="text-gray-600 mt-2">A mobile-friendly app developed using [Tech Stack, e.g., Flutter] for [purpose].</p>
-          <a href="#" class="text-blue-600 hover:underline mt-4 inline-block">View Project</a>
-        </div>
-        <!-- Project 3 -->
-        <div class="card">
-          <img src="https://via.placeholder.com/300x200" alt="Project 3" class="w-full h-48 object-cover rounded-t-lg">
-          <h3 class="text-xl font-semibold mt-4">Project Three</h3>
-          <p class="text-gray-600 mt-2">An innovative solution using [Tech Stack, e.g., Python and Django] to address [problem].</p>
-          <a href="#" class="text-blue-600 hover:underline mt-4 inline-block">View Project</a>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Work Experience Section -->
-  <section id="experience" class="py-16 bg-gray-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="section-heading">Work Experience</h2>
-      <div class="space-y-6">
-        <!-- Experience 1 -->
-        <div class="card">
-          <h3 class="text-xl font-semibold">[Job Title, e.g., Software Engineer]</h3>
-          <p class="text-gray-600">[Company Name] | [Start Date] - [End Date or Present]</p>
-          <ul class="list-disc pl-5 mt-2 text-gray-600">
-            <li>Developed and maintained [specific project or responsibility].</li>
-            <li>Collaborated with cross-functional teams to deliver [specific outcome].</li>
-            <li>Implemented [specific technology or tool] to improve [specific metric].</li>
-          </ul>
+    <section id="education" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h3 class="text-3xl font-bold text-center mb-12 text-gray-800">Education</h3>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h4 class="text-xl font-semibold mb-2 text-blue-600">M.Sc. Artificial Intelligence and Machine Learning</h4>
+                    <p class="text-gray-600 mb-2">Mahatma Gandhi University</p>
+                    <p class="text-gray-600 mb-2">2023 - July 2025</p>
+                    <p class="text-gray-800 font-medium">CGPA: 7.43/10 (GPA: 3/4)</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h4 class="text-xl font-semibold mb-2 text-blue-600">B.Sc. Physics with Computer Application</h4>
+                    <p class="text-gray-600 mb-2">Mahatma Gandhi University</p>
+                    <p class="text-gray-600 mb-2">2020 - May 2023</p>
+                    <p class="text-gray-800 font-medium">CGPA: 7.57/10 (GPA: 3/4)</p>
+                </div>
+            </div>
         </div>
-        <!-- Experience 2 -->
-        <div class="card">
-          <h3 class="text-xl font-semibold">[Job Title, e.g., Junior Developer]</h3>
-          <p class="text-gray-600">[Company Name] | [Start Date] - [End Date]</p>
-          <ul class="list-disc pl-5 mt-2 text-gray-600">
-            <li>Contributed to [specific project or task].</li>
-            <li>Optimized [specific process or feature] for better performance.</li>
-            <li>Supported [specific team or initiative] to achieve [goal].</li>
-          </ul>
+    </section>
+
+    <section id="projects" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h3 class="text-3xl font-bold text-center mb-12 text-gray-800">Academic Projects & Research Experience</h3>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                    <h4 class="text-xl font-semibold mb-2 text-blue-600">Gesture Aware and Agnostic Deep Learning Approach for Robotic Surgical Error Detection</h4>
+                    <p class="text-gray-600 mb-4">Feb - Aug 2025</p>
+                    <p class="text-gray-700 mb-4">Developed a dual-path deep learning model integrating GRU, self-attention, and 1D CNNs to detect executional errors in robotic surgery, leveraging gesture-aware context and gesture-agnostic motion patterns on the JIGSAWS benchmark dataset.</p>
+                    <p class="text-sm text-green-600 mb-4">Publication: Submitted to IEEE INDICON Conference, 2025</p>
+                    <a href="#" class="btn inline-block">View Details</a>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                    <h4 class="text-xl font-semibold mb-2 text-blue-600">Advanced Diagnostic Deep Learning Strategies for B-cell Non-Hodgkin Lymphomas Classification</h4>
+                    <p class="text-gray-600 mb-4">2024 - 2025</p>
+                    <p class="text-gray-700 mb-4">Developed a deep learning framework for classifying B-cell NHL subtypes (DLBCL, FL, CLL, MCL) using transfer learning with VGG16, InceptionV3, and Xception models, combined via ensemble techniques. Employed GAN-based augmentation and advanced preprocessing to boost image diversity and reduce overfitting. Integrated LIME for explainable predictions, enhancing model transparency for clinical use.</p>
+                    <a href="#" class="btn inline-block">View Details</a>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                    <h4 class="text-xl font-semibold mb-2 text-blue-600">Hartree-Fock Computational Study on the Substitution Effect on IR Spectra, Electronic and Optical Properties of Benzene</h4>
+                    <p class="text-gray-600 mb-4">2022 - 2023</p>
+                    <p class="text-gray-700 mb-4">Used HF methods in Gaussian09 to examine how NH₂ substitution affects benzene's IR spectra, geometry, dipole moment, and HOMO-LUMO gap. Analyzed electronic and optical property changes through computational modeling.</p>
+                    <a href="#" class="btn inline-block">View Details</a>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="py-16">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h2 class="section-heading">Get in Touch</h2>
-      <p class="text-gray-600 max-w-2xl mx-auto mb-6">
-        I'm always open to new opportunities and collaborations. Feel free to reach out!
-      </p>
-      <div class="space-y-4">
-        <p>Email: <a href="mailto:your.email@example.com" class="text-blue-600 hover:underline">your.email@example.com</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/your-linkedin-profile" target="_blank" class="text-blue-600 hover:underline">linkedin.com/in/your-linkedin-profile</a></p>
-        <p>GitHub: <a href="https://github.com/your-github-profile" target="_blank" class="text-blue-600 hover:underline">github.com/your-github-profile</a></p>
-      </div>
-    </div>
-  </section>
+    <section id="skills" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h3 class="text-3xl font-bold text-center mb-12 text-gray-800">Skills</h3>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 text-blue-600">Programming Languages</h4>
+                    <ul class="list-disc pl-5 space-y-1 text-gray-700">
+                        <li>Python</li>
+                        <li>R</li>
+                        <li>SQL</li>
+                        <li>C++</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 text-blue-600">Technologies & Tools</h4>
+                    <ul class="list-disc pl-5 space-y-1 text-gray-700">
+                        <li>PyTorch, TensorFlow</li>
+                        <li>Hugging Face Transformers</li>
+                        <li>scikit-learn, OpenCV</li>
+                        <li>Jupyter Notebooks, Google Colab</li>
+                        <li>NumPy, Pandas, Matplotlib, Seaborn</li>
+                        <li>Keras, LaTeX</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 text-blue-600">AI/ML Techniques</h4>
+                    <ul class="list-disc pl-5 space-y-1 text-gray-700">
+                        <li>Supervised & Unsupervised Learning</li>
+                        <li>Deep Learning</li>
+                        <li>Natural Language Processing (NLP)</li>
+                        <li>Transfer Learning</li>
+                        <li>Computer Vision</li>
+                        <li>Feature Engineering</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 text-blue-600">Data Science & Analytics</h4>
+                    <ul class="list-disc pl-5 space-y-1 text-gray-700">
+                        <li>Exploratory Data Analysis (EDA) & Data Preprocessing</li>
+                        <li>Statistical Modeling & Inference</li>
+                        <li>Time Series Analysis & Forecasting</li>
+                        <li>Experimental Design & Causal Inference</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md max-w-2xl mx-auto">
+                <h4 class="text-lg font-semibold mb-4 text-blue-600">Soft Skills</h4>
+                <ul class="list-disc pl-5 space-y-1 text-gray-700">
+                    <li>Dedicated</li>
+                    <li>Critical Thinking</li>
+                    <li>Collaboration</li>
+                    <li>Continuous Learning</li>
+                    <li>Adaptability</li>
+                </ul>
+            </div>
+        </div>
+    </section>
 
-  <!-- Footer -->
-  <footer class="bg-gray-800 text-white py-6">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <p>&copy; 2025 Jishnu. All rights reserved.</p>
-    </div>
-  </footer>
+    <section id="contact" class="contact py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h3 class="text-3xl font-bold text-center mb-8">Get In Touch</h3>
+            <form class="max-w-md mx-auto">
+                <input type="text" placeholder="Your Name" required class="w-full p-3 rounded-lg">
+                <input type="email" placeholder="Your Email" required class="w-full p-3 rounded-lg">
+                <textarea rows="5" placeholder="Your Message" required class="w-full p-3 rounded-lg"></textarea>
+                <button type="submit" class="w-full bg-blue-600 text-white p-3 rounded-lg hover:bg-blue-700">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Jishnu. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Simple smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 </html>
